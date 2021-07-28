@@ -11,3 +11,8 @@ But all these can be automated, to save you less stress and that is the focus of
 
 It comes with a user auth system, to control user authentication and permission
 it also comes with a guest app, that keeps tracks of guests that enters the office premises.
+
+If you are reading this, I do not give much detail to the frontend of my django apps, this is because I want learners to have a better appreciation of the 
+python codes and understand what is happening, that getting all drenched in html and css.
+
+Yup, at this point, git push -u origin master :)
