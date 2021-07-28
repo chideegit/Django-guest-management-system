@@ -1,0 +1,36 @@
+{% extends 'guest/base.html' %}
+
+{% block content %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Guest Names</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">To See</th>
+            <th scope="col">TIme In</th>
+            <th scope="col">Time Out</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% if obj %}
+        {% for o in obj %}
+        <tr>
+            <td>{{o.guest_names}}</td>
+            <td>{{o.guest_email}}</td>
+            <td>{{o.guest_no}}</td>
+            <td>{{o.to_see}}</td>
+            <td>{{o.time_in}}</td>
+            {% if o.signed_out == True %}
+            <td>{{o.time_out}}</td>
+            {% else %}
+            <td>Not Signed Out</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </tbody>
+</table>
+
+{% endblock content %}
